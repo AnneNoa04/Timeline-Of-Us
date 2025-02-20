@@ -58,12 +58,34 @@
 
         </footer>
         <nav>
-            <ul style="list-style-type: none; padding: 0; text-align: center;">
+            <div class="menu-icon" onclick="toggleMenu()">
+            &#9776;
+            </div>
+            <ul id="menu" style="list-style-type: none; padding: 0; text-align: center; display: none;"></ul>
             <li style="display: inline; margin-right: 13px;"><a href="#home" style="color: rgb(206, 169, 120); text-decoration: none; text-decoration: underline;">Home</a></li>
             <li style="display: inline; margin-right: 13px;"><a href="#about" style="color: rgb(206, 169, 120); text-decoration: none; text-decoration: underline;">About</a></li>
             <li style="display: inline; margin-right: 13px;"><a href="#timeline" style="color: rgb(206, 169, 120); text-decoration: none; text-decoration: underline;">Order</a></li>
             <li style="display: inline;"><a href="#contact" style="color: rgb(206, 169, 120); text-decoration: none; text-decoration: underline;">Contact</a></li>
             </ul>
         </nav>
+        <script>
+            function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "none") {
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+            }
+        </script>
+        <style>
+            .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+            color: rgb(206, 169, 120);
+            text-align: center;
+            padding: 10px;
+            }
+        </style>
     </body>
 
