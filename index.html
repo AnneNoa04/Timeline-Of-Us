@@ -12,7 +12,7 @@
         footer{
             background-color: rgb(40, 15, 15);
             color: rgb(206, 169, 120);
-            padding: 10px;
+            padding: 3px;
             text-align: center;
             position: fixed;
             bottom: 0;
@@ -31,6 +31,46 @@
     </style>
 </head>
     <body>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <script>
+        function toggleMenu() {
+            var x = document.querySelector(".menu-icon");
+            x.classList.toggle("change");
+        }
+        </script>
+
+        <style>
+        .menu-icon {
+            display: inline-block;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .menu-icon .bar1, .menu-icon .bar2, .menu-icon .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: #333;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        .change .bar1 {
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+
+        .change .bar2 {
+            opacity: 0;
+        }
+
+        .change .bar3 {
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+        </style>
         <header>
             <h1>Timeline of Us</h1>
         <div class="header">
