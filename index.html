@@ -34,7 +34,12 @@
 </head>
 
     <body>
-        
+        <script>
+            function redirectToPage() {
+            window.location.href = "about.html";
+            }
+            window.onload = redirectToPage;
+        </script>
         <header>
             <h1>Timeline of Us</h1>
         <div class="header">
@@ -70,7 +75,7 @@
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
-        border: 1px solid rgb(40, 15, 15);
+        
         }
 
         .dropdown-content a {
