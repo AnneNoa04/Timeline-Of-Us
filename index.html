@@ -57,35 +57,70 @@
 <a href="mailto:leeo.qnn@gmail.com" target="_blank" style="color: rgb(206, 169, 120); font-family: Arial, sans-serif;">Email</a> |
 
         </footer>
-        <nav>
-            <div class="menu-icon" onclick="toggleMenu()">
-            &#9776;
-            </div>
-            <ul id="menu" style="list-style-type: none; padding: 0; text-align: center; display: none;"></ul>
-            <li style="display: inline; margin-right: 13px;"><a href="#home" style="color: rgb(206, 169, 120); text-decoration: none; text-decoration: underline;">Home</a></li>
-            <li style="display: inline; margin-right: 13px;"><a href="#about" style="color: rgb(206, 169, 120); text-decoration: none; text-decoration: underline;">About</a></li>
-            <li style="display: inline; margin-right: 13px;"><a href="#timeline" style="color: rgb(206, 169, 120); text-decoration: none; text-decoration: underline;">Order</a></li>
-            <li style="display: inline;"><a href="#contact" style="color: rgb(206, 169, 120); text-decoration: none; text-decoration: underline;">Contact</a></li>
+    <nav>
+        <ul class="dropdown">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a>
+            <ul class="submenu">
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">SEO</a></li>
+            <li><a href="#">Marketing</a></li>
             </ul>
-        </nav>
-        <script>
-            function toggleMenu() {
-            var menu = document.getElementById("menu");
-            if (menu.style.display === "none") {
-                menu.style.display = "block";
-            } else {
-                menu.style.display = "none";
-            }
-            }
-        </script>
-        <style>
-            .menu-icon {
-            font-size: 30px;
-            cursor: pointer;
-            color: rgb(206, 169, 120);
-            text-align: center;
-            padding: 10px;
-            }
-        </style>
+        </li>
+        <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <style>
+        nav {
+        margin-top: 60px; /* Adjust based on header height */
+        }
+        .dropdown {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: rgb(40, 15, 15);
+        width: 200px;
+        }
+        .dropdown > li {
+        position: relative;
+        }
+        .dropdown > li > a {
+        display: block;
+        padding: 10px;
+        color: rgb(206, 169, 120);
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        }
+        .dropdown > li > a:hover {
+        background-color: rgb(206, 169, 120);
+        color: rgb(40, 15, 15);
+        }
+        .submenu {
+        display: none;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgb(40, 15, 15);
+        width: 200px;
+        }
+        .submenu > li > a {
+        padding: 10px;
+        color: rgb(206, 169, 120);
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        }
+        .submenu > li > a:hover {
+        background-color: rgb(206, 169, 120);
+        color: rgb(40, 15, 15);
+        }
+        .dropdown > li:hover .submenu {
+        display: block;
+        }
+    </style>
     </body>
 
